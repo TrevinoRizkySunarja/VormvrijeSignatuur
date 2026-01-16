@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro</title>
+
+    <link rel="stylesheet" href="/css/intro.css" />
+    <script type="module" src="/js/intro.js" defer></script>
+</head>
+<body>
+
+<!-- Popup 1 (start) -->
+<div class="modal is-open" id="modal1" aria-hidden="false">
+    <div class="modal__backdrop"></div>
+    <section class="modal__card" role="dialog" aria-modal="true" aria-labelledby="m1Title">
+        <h1 class="modal__title" id="m1Title">Welkom</h1>
+        <p class="modal__text">
+            Hallo, mijn naam is <strong>Trevino Rizky Sunarja</strong>. Dit is mijn
+            <strong>Vormvrije Signatuur</strong> assessment-opdracht. Voor deze opdracht heb ik een
+            persoonlijk systeem ontworpen en gebouwd dat mij helpt om mijn ontwikkeling zichtbaar en
+            gestructureerd bij te houden.
+        </p>
+        <p class="modal__text">
+            In de hub vind je zes onderdelen: <strong>Notes</strong>, <strong>Deadlines</strong>,
+            <strong>Research</strong>, <strong>Testing</strong>, <strong>Feedback</strong> en
+            <strong>Results</strong>. Per onderdeel laat ik zien wat ik heb gedaan, wat ik heb geleerd,
+            en hoe ik beslissingen onderbouw met onderzoek, prototypes en tests.
+        </p>
+
+        <button class="btn" id="next1" type="button">Volgende</button>
+    </section>
+</div>
+
+<!-- Popup 2 -->
+<div class="modal" id="modal2" aria-hidden="true">
+    <div class="modal__backdrop"></div>
+    <section class="modal__card" role="dialog" aria-modal="true" aria-labelledby="m2Title">
+        <h2 class="modal__title" id="m2Title">Waarom deze opzet</h2>
+        <p class="modal__text">
+            Uit feedback heb ik meegenomen dat ik mijn <strong>deadlines strakker moet bewaken</strong>
+            en <strong>duidelijker moet communiceren</strong> met mijn teamgenoten. Daarom heb ik dit
+            systeem zo ingericht dat ik vaste momenten heb om planning en voortgang bij te werken.
+        </p>
+        <p class="modal__text">
+            Ik heb onderdelen aangemaakt voor het <strong>bijhouden van notes</strong>, het plannen en
+            controleren van <strong>deadlines</strong> en het uitvoeren van <strong>research</strong>.
+            Daarnaast heb ik secties waarin ik <strong>feedback verwerk</strong>, mijn
+            <strong>testresultaten</strong> noteer en duidelijk maak <strong>wat er nog getest moet
+            worden</strong>. Zo kan ik aantonen hoe ik verbeterpunten omzet naar concrete acties.
+        </p>
+
+        <button class="btn" id="finishIntro" type="button">Naar hub</button>
+    </section>
+</div>
+
+</body>
+</html>

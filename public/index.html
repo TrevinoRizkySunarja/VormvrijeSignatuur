@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <script type="module" src="/js/script.js" defer></script>
+</head>
+
+<body>
+<main class="page">
+    <section class="card" aria-label="Login card">
+        <h1 class="title">Login</h1>
+
+        <form id="loginForm" class="form" autocomplete="off" novalidate>
+            <div class="field">
+                <label class="label" for="username">Username</label>
+                <input class="input" id="username" name="username" type="text" />
+                <p class="error" id="errUser"></p>
+            </div>
+
+            <div class="field">
+                <label class="label" for="password">Password</label>
+                <input class="input" id="password" name="password" type="password" />
+                <p class="error" id="errPass"></p>
+            </div>
+
+            <button class="btn" id="loginBtn" type="submit">
+                <span class="btn__text">Sign in</span>
+            </button>
+
+            <p class="sub">
+                Not registered? <a class="link" href="#" id="createAccount">Create an account</a>
+            </p>
+
+            <p class="success" id="successMsg" aria-live="polite"></p>
+        </form>
+    </section>
+</main>
+</body>
+</html>

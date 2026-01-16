@@ -1,0 +1,121 @@
+:root{
+    --bg1:#3a2341;
+    --bg2:#2b3551;
+    --bg3:#2c7ea8;
+
+    --card:#0f1a2a;
+    --card2:#121f33;
+    --text:#eaf2ff;
+    --muted:rgba(234,242,255,.62);
+    --line:rgba(234,242,255,.35);
+
+    --accent:#4aa9d3;
+    --shadow:0 24px 60px rgba(0,0,0,.45);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+    margin:0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color:var(--text);
+    background:
+            radial-gradient(900px 500px at 10% 10%, rgba(255,255,255,.10), transparent 65%),
+            radial-gradient(900px 600px at 90% 30%, rgba(255,255,255,.08), transparent 70%),
+            linear-gradient(180deg, var(--bg1), var(--bg2) 45%, var(--bg3));
+}
+
+.page{
+    min-height:100%;
+    display:grid;
+    place-items:center;
+    padding:28px 16px;
+}
+
+.card{
+    width:min(520px, 92vw);
+    background:linear-gradient(180deg, rgba(18,31,51,.92), rgba(15,26,42,.92));
+    border-radius:10px;
+    padding:56px 56px 44px;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(6px);
+}
+
+.title{
+    margin:0 0 28px 0;
+    text-align:center;
+    font-weight:700;
+    letter-spacing:.3px;
+}
+
+.form{display:grid; gap:18px}
+
+.field{display:grid; gap:10px}
+.label{
+    font-size:16px;
+    color:rgba(234,242,255,.6);
+}
+
+.input{
+    width:100%;
+    background:transparent;
+    border:none;
+    border-bottom:2px solid rgba(234,242,255,.35);
+    padding:10px 2px 12px;
+    color:var(--text);
+    font-size:18px;
+    outline:none;
+}
+.input:focus{
+    border-bottom-color: rgba(74,169,211,.85);
+}
+
+.error{
+    margin:0;
+    min-height:18px;
+    font-size:13px;
+    color:#ffb4b4;
+}
+
+.btn{
+    margin:8px auto 0;
+    width:160px;
+    height:44px;
+    background:transparent;
+    color:rgba(74,169,211,.95);
+    border:2px solid rgba(74,169,211,.75);
+    cursor:pointer;
+    border-radius: 10px;
+    transition: border-radius 450ms ease, transform 200ms ease, border-color 250ms ease;
+    position:relative;
+}
+.btn:hover{
+    border-radius: 28px;
+    border-color: rgba(74,169,211,.95);
+}
+.btn:active{
+    transform: translateY(1px);
+}
+.btn__text{
+    font-size:18px;
+    font-weight:600;
+}
+
+.sub{
+    margin:14px 0 0;
+    text-align:center;
+    color:rgba(234,242,255,.55);
+}
+.link{
+    color:rgba(74,169,211,.95);
+    text-decoration:none;
+}
+.link:hover{ text-decoration:underline; }
+
+.success{
+    margin:8px 0 0;
+    text-align:center;
+    min-height:18px;
+    color:#a7f3d0;
+    font-size:14px;
+}

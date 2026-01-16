@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Research</title>
+
+    <link rel="stylesheet" href="/css/research.css" />
+    <script type="module" src="/js/research.js" defer></script>
+</head>
+<body>
+<header class="topbar">
+    <div class="topbar__inner">
+        <a class="back" href="/hub.html">← Hub</a>
+        <div class="spacer"></div>
+        <button class="btn btn--small" id="logoutBtn" type="button">Logout</button>
+    </div>
+</header>
+
+<main class="page">
+    <section class="wrap">
+
+        <section class="panel panel--form">
+            <h1 class="h1">Research</h1>
+            <p class="muted">
+                Voeg research-notities toe per methode. Alles wordt opgeslagen in localStorage en is terug te vinden.
+            </p>
+
+            <form id="researchForm" class="form" autocomplete="off">
+                <div class="row">
+                    <div class="field">
+                        <label class="label" for="method">Methode</label>
+                        <select class="input" id="method" name="method">
+                            <option value="crazy8s">Crazy 8s (8 schetsen)</option>
+                            <option value="brainstorm">Brainstormen</option>
+                            <option value="mindmap">Mindmapping</option>
+                            <option value="hmw">How Might We (HMW)</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label class="label" for="title">Title</label>
+                        <input class="input" id="title" name="title" type="text" placeholder="Bijv. Ideation voor Hub layout" />
+                        <p class="error" id="errTitle"></p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label" for="materials">Materialen / Opzet</label>
+                    <textarea class="textarea" id="materials" name="materials" rows="5"
+                              placeholder="Bijv. Crazy 8s: 1 blad met 8 vakken, 8 minuten, 1 idee per vak."></textarea>
+                    <p class="error" id="errMaterials"></p>
+                </div>
+
+                <div class="field">
+                    <label class="label" for="notes">Notes / Samenvatting</label>
+                    <textarea class="textarea textarea--big" id="notes" name="notes" rows="10"
+                              placeholder="Wat heb ik gedaan? Welke inzichten? Welke keuze volgt hieruit?"></textarea>
+                    <p class="error" id="errNotes"></p>
+                </div>
+
+                <div class="actions">
+                    <button class="btn" type="submit">Save research</button>
+                    <button class="btn btn--ghost" id="clearBtn" type="button">Clear</button>
+                </div>
+
+                <p class="success" id="successMsg" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="panel panel--list">
+            <div class="listhead">
+                <h2 class="h2">Saved research</h2>
+                <div class="listtools">
+                    <input class="input" id="search" type="text" placeholder="Search title/notes..." />
+                    <select class="input" id="filterMethod">
+                        <option value="ALL">All methods</option>
+                        <option value="crazy8s">Crazy 8s</option>
+                        <option value="brainstorm">Brainstorm</option>
+                        <option value="mindmap">Mindmap</option>
+                        <option value="hmw">HMW</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="list" id="itemsList"></div>
+            <div class="empty muted" id="emptyState">Nog geen research items.</div>
+        </section>
+
+    </section>
+</main>
+</body>
+</html>
