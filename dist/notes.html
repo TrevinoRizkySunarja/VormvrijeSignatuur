@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes</title>
+
+  <script type="module" crossorigin src="./assets/notes-CX-wWtOf.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="modulepreload" crossorigin href="./assets/auth-Co2TAfQH.js">
+  <link rel="stylesheet" crossorigin href="./assets/notes-CFbAR4kg.css">
+</head>
+<body>
+<header class="topbar">
+    <div class="topbar__inner">
+        <a class="back" href="/hub.html">← Hub</a>
+        <div class="spacer"></div>
+        <button class="btn btn--small" id="logoutBtn" type="button">Logout</button>
+    </div>
+</header>
+
+<main class="page">
+    <section class="wrap">
+        <section class="panel panel--form">
+            <h1 class="h1">Notes</h1>
+            <p class="muted">
+                Voeg een note toe met titel, status en documenttekst. Alles wordt opgeslagen in localStorage.
+            </p>
+
+            <form id="noteForm" class="form" autocomplete="off">
+                <div class="row">
+                    <div class="field">
+                        <label class="label" for="title">Title</label>
+                        <input class="input" id="title" name="title" type="text" placeholder="Bijv. Sprint reflectie" />
+                        <p class="error" id="errTitle"></p>
+                    </div>
+
+                    <div class="field">
+                        <label class="label" for="status">Status</label>
+                        <select class="input" id="status" name="status">
+                            <option value="Open">Open</option>
+                            <option value="In progress">In progress</option>
+                            <option value="Done">Done</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label" for="content">Document</label>
+                    <textarea class="textarea" id="content" name="content" rows="8"
+                              placeholder="Schrijf hier je note... (datum, wat gedaan, waarom, bewijs, volgende actie)"></textarea>
+                    <p class="error" id="errContent"></p>
+                </div>
+
+                <div class="actions">
+                    <button class="btn" type="submit">Save note</button>
+                    <button class="btn btn--ghost" id="clearFormBtn" type="button">Clear</button>
+                </div>
+
+                <p class="success" id="successMsg" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="panel panel--list">
+            <div class="listhead">
+                <h2 class="h2">Saved notes</h2>
+                <div class="listtools">
+                    <input class="input input--search" id="search" type="text" placeholder="Search title/document..." />
+                    <select class="input input--filter" id="filterStatus">
+                        <option value="ALL">All</option>
+                        <option value="Open">Open</option>
+                        <option value="In progress">In progress</option>
+                        <option value="Done">Done</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="list" id="notesList"></div>
+
+            <div class="empty muted" id="emptyState">
+                No notes yet. Create your first note on the left.
+            </div>
+        </section>
+    </section>
+</main>
+</body>
+</html>

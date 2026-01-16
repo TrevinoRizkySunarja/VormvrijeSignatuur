@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testing</title>
+
+  <script type="module" crossorigin src="./assets/testing-BThMaWM1.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="modulepreload" crossorigin href="./assets/auth-Co2TAfQH.js">
+  <link rel="stylesheet" crossorigin href="./assets/testing-BqJeyR9z.css">
+</head>
+<body>
+<header class="topbar">
+    <div class="topbar__inner">
+        <a class="back" href="/hub.html">← Hub</a>
+        <div class="spacer"></div>
+        <button class="btn btn--small" id="logoutBtn" type="button">Logout</button>
+    </div>
+</header>
+
+<main class="page">
+    <section class="wrap">
+
+        <section class="panel panel--form">
+            <h1 class="h1">Testing</h1>
+            <p class="muted">
+                Registreer tests per prototype: wat je test, wanneer je test, en het resultaat.
+            </p>
+
+            <form id="testForm" class="form" autocomplete="off">
+                <div class="row">
+                    <div class="field">
+                        <label class="label" for="prototype">Product / Prototype</label>
+                        <input class="input" id="prototype" type="text" placeholder="Bijv. Hub pagina + Notes flow" />
+                        <p class="error" id="errPrototype"></p>
+                    </div>
+
+                    <div class="field">
+                        <label class="label" for="testedAt">Getest op (datum + tijd)</label>
+                        <input class="input" id="testedAt" type="datetime-local" />
+                        <p class="error" id="errTestedAt"></p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label" for="desc">Description</label>
+                    <textarea class="textarea" id="desc" rows="4" placeholder="Wat is dit prototype? Welke scope?"></textarea>
+                    <p class="error" id="errDesc"></p>
+                </div>
+
+                <div class="field">
+                    <label class="label" for="what">Wat ga je testen?</label>
+                    <textarea class="textarea" id="what" rows="4" placeholder="Taken, scenario, criteria (wat is ‘succes’?)"></textarea>
+                    <p class="error" id="errWhat"></p>
+                </div>
+
+                <div class="field">
+                    <label class="label" for="result">Resultaat</label>
+                    <textarea class="textarea textarea--big" id="result" rows="8" placeholder="Observaties + issues + conclusie + volgende actie"></textarea>
+                    <p class="error" id="errResult"></p>
+                </div>
+
+                <div class="actions">
+                    <button class="btn" type="submit">Save test</button>
+                    <button class="btn btn--ghost" id="clearBtn" type="button">Clear</button>
+                </div>
+
+                <p class="success" id="successMsg" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="panel panel--list">
+            <div class="listhead">
+                <h2 class="h2">Saved tests</h2>
+                <input class="input" id="search" type="text" placeholder="Search prototype/result..." />
+            </div>
+
+            <div class="list" id="itemsList"></div>
+            <div class="empty muted" id="emptyState">Nog geen tests.</div>
+        </section>
+
+    </section>
+</main>
+</body>
+</html>

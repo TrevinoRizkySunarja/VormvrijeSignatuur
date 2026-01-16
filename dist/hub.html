@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hub</title>
+
+  <script type="module" crossorigin src="./assets/hub-BEEqPxLV.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="modulepreload" crossorigin href="./assets/auth-Co2TAfQH.js">
+  <link rel="stylesheet" crossorigin href="./assets/hub-BDthYPFu.css">
+</head>
+<body>
+<header class="topbar">
+    <div class="topbar__inner">
+        <div class="topbar__left">
+            <h1 class="brand">Vormvrije Signatuur</h1>
+            <p class="muted" id="welcomeText"></p>
+        </div>
+
+        <div class="topbar__right">
+            <button class="btn btn--small" id="logoutBtn" type="button">Logout</button>
+        </div>
+    </div>
+</header>
+
+<main class="page">
+    <section class="hubwrap">
+
+        <section class="hero">
+            <div class="hero__panel hero__panel--big">
+                <h2 class="hero__title">Mijn persoonlijke ontwikkelhub</h2>
+                <p class="hero__text">
+                    Dit dashboard is gemaakt voor mijn Vormvrije Signatuur assessment. Het laat zien hoe ik
+                    mijn verbeterpunten omzet naar een werkbare aanpak: beter plannen, notes consistent bijhouden,
+                    research onderbouwen, testen uitvoeren en feedback verwerken.
+                </p>
+
+                <div class="pillrow">
+                    <span class="pill">Planning</span>
+                    <span class="pill">Communicatie</span>
+                    <span class="pill">Onderbouwing</span>
+                    <span class="pill">Iteratie</span>
+                </div>
+
+                <div class="steps">
+                    <div class="step"><span class="step__n">1</span><span class="step__t">Notes</span></div>
+                    <div class="step"><span class="step__n">2</span><span class="step__t">Deadlines</span></div>
+                    <div class="step"><span class="step__n">3</span><span class="step__t">Research</span></div>
+                    <div class="step"><span class="step__n">4</span><span class="step__t">Testing</span></div>
+                    <div class="step"><span class="step__n">5</span><span class="step__t">Feedback</span></div>
+                    <div class="step"><span class="step__n">6</span><span class="step__t">Results</span></div>
+                </div>
+            </div>
+
+            <div class="hero__panel">
+                <div class="summary">
+                    <div class="summary__title">Snel overzicht</div>
+                    <p class="summary__text">
+                        Tip: zet per pagina steeds (1) datum, (2) wat ik heb gedaan, (3) waarom, (4) bewijs/screenshot, (5) volgende actie.
+                    </p>
+                </div>
+
+                <div class="mini">
+                    <div class="mini__k">Status</div>
+                    <div class="mini__v">In opbouw</div>
+                </div>
+                <div class="mini">
+                    <div class="mini__k">Doel</div>
+                    <div class="mini__v">Aantonen groei + aanpak</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="maincard">
+            <div class="maincard__head">
+                <h3 class="maincard__title">Onderdelen</h3>
+                <p class="maincard__sub">Klik om te openen</p>
+            </div>
+
+            <div class="tiles">
+                <a class="tile" href="/notes.html">
+                    <div class="tile__iconwrap">
+                        <img class="tile__icon" alt="" src="https://www.svgrepo.com/download/525453/notes.svg">
+                    </div>
+                    <div class="tile__body">
+                        <div class="tile__title">Notes</div>
+                        <div class="tile__text">Logboek: beslissingen, reflectie, korte updates en wat ik meeneem naar de volgende stap.</div>
+                    </div>
+                    <div class="tile__cta">Open</div>
+                </a>
+
+                <a class="tile" href="/deadlines.html">
+                    <div class="tile__iconwrap">
+                        <img class="tile__icon" alt="" src="https://www.svgrepo.com/download/110021/calendar-with-deadlines.svg">
+                    </div>
+                    <div class="tile__body">
+                        <div class="tile__title">Deadlines</div>
+                        <div class="tile__text">Weekplanning + deadline-check: wat moet af, wat is af, en wat is de volgende actie.</div>
+                    </div>
+                    <div class="tile__cta">Open</div>
+                </a>
+
+                <a class="tile" href="/research.html">
+                    <div class="tile__iconwrap">
+                        <img class="tile__icon" alt="" src="https://www.svgrepo.com/download/520505/research.svg">
+                    </div>
+                    <div class="tile__body">
+                        <div class="tile__title">Research</div>
+                        <div class="tile__text">Onderzoek + samenvattingen. Hier onderbouw ik keuzes met bronnen en methodes.</div>
+                    </div>
+                    <div class="tile__cta">Open</div>
+                </a>
+
+                <a class="tile" href="/testing.html">
+                    <div class="tile__iconwrap">
+                        <img class="tile__icon" alt="" src="https://www.svgrepo.com/download/439027/usability-testing.svg">
+                    </div>
+                    <div class="tile__body">
+                        <div class="tile__title">Testing</div>
+                        <div class="tile__text">Usability tests: taken, observaties, issues, en wat ik daarna verbeter.</div>
+                    </div>
+                    <div class="tile__cta">Open</div>
+                </a>
+
+                <a class="tile" href="/feedback.html">
+                    <div class="tile__iconwrap">
+                        <img class="tile__icon" alt="" src="https://www.svgrepo.com/download/361153/feedback.svg">
+                    </div>
+                    <div class="tile__body">
+                        <div class="tile__title">Feedback</div>
+                        <div class="tile__text">Feedback verwerken: prioriteit, actiepunt, aanpassing, en bewijs van de wijziging.</div>
+                    </div>
+                    <div class="tile__cta">Open</div>
+                </a>
+
+                <a class="tile" href="/results.html">
+                    <div class="tile__iconwrap">
+                        <img class="tile__icon" alt="" src="https://www.svgrepo.com/download/10507778/analytics-results.svg">
+                    </div>
+                    <div class="tile__body">
+                        <div class="tile__title">Results</div>
+                        <div class="tile__text">Eindoverzicht: wat is verbeterd, wat blijft lastig, en welke concrete bewijzen toon ik.</div>
+                    </div>
+                    <div class="tile__cta">Open</div>
+                </a>
+            </div>
+
+
+        </section>
+
+    </section>
+</main>
+</body>
+</html>

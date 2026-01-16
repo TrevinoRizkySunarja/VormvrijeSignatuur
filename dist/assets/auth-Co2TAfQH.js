@@ -1,0 +1,1 @@
+function e(){const t=localStorage.getItem("authUser");if(!t)return null;try{return JSON.parse(t)}catch{return null}}function r(){const t=e();return t!=null&&t.loggedIn||(window.location.href="../index.html"),t}function n(){localStorage.removeItem("authUser"),window.location.href="../index.html"}export{n as l,r};

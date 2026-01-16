@@ -1,0 +1,1 @@
+import"./modulepreload-polyfill-B5Qt9EMX.js";import{r as e,l as t}from"./auth-Co2TAfQH.js";const o=e(),n=document.getElementById("welcomeText");n.textContent=`Ingelogd als: ${o.username}`;document.getElementById("logoutBtn").addEventListener("click",t);

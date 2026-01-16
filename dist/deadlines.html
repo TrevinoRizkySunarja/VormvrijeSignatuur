@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deadlines</title>
+
+  <script type="module" crossorigin src="./assets/deadlines-BjFkOwwz.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="modulepreload" crossorigin href="./assets/auth-Co2TAfQH.js">
+  <link rel="stylesheet" crossorigin href="./assets/deadlines-BL9B0QNw.css">
+</head>
+<body>
+<header class="topbar">
+    <div class="topbar__inner">
+        <a class="back" href="/hub.html">← Hub</a>
+        <div class="spacer"></div>
+        <button class="btn btn--small" id="logoutBtn" type="button">Logout</button>
+    </div>
+</header>
+
+<main class="page">
+    <section class="wrap">
+
+        <!-- Left: Create / Edit -->
+        <section class="panel panel--form">
+            <h1 class="h1">Deadlines</h1>
+            <p class="muted">
+                Voeg deadlines toe met titel, beschrijving, datum, tijd en priority. Alles wordt opgeslagen in localStorage.
+            </p>
+
+            <form id="deadlineForm" class="form" autocomplete="off">
+                <div class="field">
+                    <label class="label" for="title">Title</label>
+                    <input class="input" id="title" name="title" type="text" placeholder="Bijv. Vormvrije signatuur - Research samenvatting" />
+                    <p class="error" id="errTitle"></p>
+                </div>
+
+                <div class="field">
+                    <label class="label" for="desc">Beschrijving</label>
+                    <textarea class="textarea" id="desc" name="desc" rows="5" placeholder="Wat moet er af zijn? Wat is de scope?"></textarea>
+                    <p class="error" id="errDesc"></p>
+                </div>
+
+                <div class="row">
+                    <div class="field">
+                        <label class="label" for="date">Datum</label>
+                        <input class="input" id="date" name="date" type="date" />
+                        <p class="error" id="errDate"></p>
+                    </div>
+
+                    <div class="field">
+                        <label class="label" for="time">Tijd</label>
+                        <input class="input" id="time" name="time" type="time" value="10:00" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="field">
+                        <label class="label" for="priority">Priority</label>
+                        <select class="input" id="priority" name="priority">
+                            <option value="low">Low</option>
+                            <option value="neutral" selected>Neutral</option>
+                            <option value="high">High</option>
+                            <option value="urgent">Urgent</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label class="label" for="status">Status</label>
+                        <select class="input" id="status" name="status">
+                            <option value="open" selected>Open</option>
+                            <option value="in_progress">In progress</option>
+                            <option value="done">Done</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button class="btn" type="submit" id="saveBtn">Save deadline</button>
+                    <button class="btn btn--ghost" type="button" id="clearBtn">Clear</button>
+                </div>
+
+                <p class="success" id="successMsg" aria-live="polite"></p>
+            </form>
+
+            <div class="helpbox">
+                <div class="helpbox__t">Tip</div>
+                <div class="helpbox__p muted">
+                    Gebruik <strong>Urgent</strong> alleen als het echt een harde cut-off is. Zet bij beschrijving ook
+                    “wat is de volgende actie” zodat je niet vastloopt.
+                </div>
+            </div>
+        </section>
+
+        <!-- Right: Calendar + Day timeline + List -->
+        <section class="panel panel--calendar">
+            <div class="calhead">
+                <div>
+                    <h2 class="h2">Agenda</h2>
+                    <p class="muted" id="selectedDateText"></p>
+                </div>
+
+                <div class="tools">
+                    <select class="input input--small" id="filterPriority">
+                        <option value="ALL">All priorities</option>
+                        <option value="low">Low</option>
+                        <option value="neutral">Neutral</option>
+                        <option value="high">High</option>
+                        <option value="urgent">Urgent</option>
+                    </select>
+
+                    <select class="input input--small" id="filterStatus">
+                        <option value="ALL">All status</option>
+                        <option value="open">Open</option>
+                        <option value="in_progress">In progress</option>
+                        <option value="done">Done</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="calendarBox">
+                <div class="monthbar">
+                    <button class="iconbtn" id="prevMonth" type="button" aria-label="Vorige maand">‹</button>
+                    <div class="monthtitle" id="monthTitle">—</div>
+                    <button class="iconbtn" id="nextMonth" type="button" aria-label="Volgende maand">›</button>
+                </div>
+
+                <div class="weekdays">
+                    <div>Ma</div><div>Di</div><div>Wo</div><div>Do</div><div>Vr</div><div>Za</div><div>Zo</div>
+                </div>
+
+                <div class="grid" id="calGrid"></div>
+            </div>
+
+            <div class="split">
+                <section class="day">
+                    <div class="day__head">
+                        <h3 class="h3">Dagplanning</h3>
+                        <div class="muted small">Klik op een deadline om te bewerken</div>
+                    </div>
+                    <div class="timeline" id="timeline"></div>
+                </section>
+
+                <section class="list">
+                    <div class="list__head">
+                        <h3 class="h3">Deadlines op deze dag</h3>
+                        <div class="muted small" id="dayCount">0</div>
+                    </div>
+                    <div class="items" id="dayList"></div>
+                    <div class="empty muted" id="emptyDay">Geen deadlines voor deze datum.</div>
+                </section>
+            </div>
+        </section>
+
+    </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+  <script type="module" crossorigin src="./assets/index-BR-ZPITR.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="stylesheet" crossorigin href="./assets/index-r70bEqY4.css">
+</head>
+
+<body>
+<main class="page">
+    <section class="card" aria-label="Login card">
+        <h1 class="title">Login</h1>
+
+        <form id="loginForm" class="form" autocomplete="off" novalidate>
+            <div class="field">
+                <label class="label" for="username">Username</label>
+                <input class="input" id="username" name="username" type="text" />
+                <p class="error" id="errUser"></p>
+            </div>
+
+            <div class="field">
+                <label class="label" for="password">Password</label>
+                <input class="input" id="password" name="password" type="password" />
+                <p class="error" id="errPass"></p>
+            </div>
+
+            <button class="btn" id="loginBtn" type="submit">
+                <span class="btn__text">Sign in</span>
+            </button>
+
+            <p class="sub">
+                Not registered? <a class="link" href="#" id="createAccount">Create an account</a>
+            </p>
+
+            <p class="success" id="successMsg" aria-live="polite"></p>
+        </form>
+    </section>
+</main>
+</body>
+</html>

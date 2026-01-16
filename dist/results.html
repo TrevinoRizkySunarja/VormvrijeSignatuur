@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Results</title>
+
+  <script type="module" crossorigin src="./assets/results-BA518uZ-.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="modulepreload" crossorigin href="./assets/auth-Co2TAfQH.js">
+  <link rel="stylesheet" crossorigin href="./assets/results-CeTNiU_a.css">
+</head>
+<body>
+<header class="topbar">
+    <div class="topbar__inner">
+        <a class="back" href="/hub.html">← Hub</a>
+        <div class="spacer"></div>
+        <button class="btn btn--small" id="logoutBtn" type="button">Logout</button>
+    </div>
+</header>
+
+<main class="page">
+    <section class="wrap">
+
+        <section class="panel panel--form">
+            <h1 class="h1">Results</h1>
+            <p class="muted">
+                Schrijf je eindresultaten: wat is de uitkomst, en wat heb je eruit gehaald.
+            </p>
+
+            <form id="resForm" class="form" autocomplete="off">
+                <div class="field">
+                    <label class="label" for="title">Title</label>
+                    <input class="input" id="title" type="text" placeholder="Bijv. Verbetering: deadlines strakker" />
+                    <p class="error" id="errTitle"></p>
+                </div>
+
+                <div class="field">
+                    <label class="label" for="desc">Beschrijving</label>
+                    <textarea class="textarea" id="desc" rows="6" placeholder="Wat was het doel? Wat heb je gedaan?"></textarea>
+                    <p class="error" id="errDesc"></p>
+                </div>
+
+                <div class="field">
+                    <label class="label" for="outcome">Resultaat / Wat heb je eruit gekregen?</label>
+                    <textarea class="textarea textarea--big" id="outcome" rows="10" placeholder="Wat werkte? Wat niet? Welke les neem je mee?"></textarea>
+                    <p class="error" id="errOutcome"></p>
+                </div>
+
+                <div class="actions">
+                    <button class="btn" type="submit">Save result</button>
+                    <button class="btn btn--ghost" id="clearBtn" type="button">Clear</button>
+                </div>
+
+                <p class="success" id="successMsg" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="panel panel--list">
+            <div class="listhead">
+                <h2 class="h2">Saved results</h2>
+                <input class="input" id="search" type="text" placeholder="Search title/outcome..." />
+            </div>
+
+            <div class="list" id="itemsList"></div>
+            <div class="empty muted" id="emptyState">Nog geen results.</div>
+        </section>
+
+    </section>
+</main>
+</body>
+</html>

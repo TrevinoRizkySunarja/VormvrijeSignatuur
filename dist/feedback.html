@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback</title>
+
+  <script type="module" crossorigin src="./assets/feedback-Bs5sbYOI.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="modulepreload" crossorigin href="./assets/auth-Co2TAfQH.js">
+  <link rel="stylesheet" crossorigin href="./assets/feedback-DsYQiq40.css">
+</head>
+<body>
+<header class="topbar">
+    <div class="topbar__inner">
+        <a class="back" href="/hub.html">← Hub</a>
+        <div class="spacer"></div>
+        <button class="btn btn--small" id="logoutBtn" type="button">Logout</button>
+    </div>
+</header>
+
+<main class="page">
+    <section class="wrap">
+
+        <section class="panel panel--form">
+            <h1 class="h1">Feedback</h1>
+            <p class="muted">
+                Leg feedback vast en zet het om naar een concrete verbetering voor de toekomst.
+            </p>
+
+            <form id="fbForm" class="form" autocomplete="off">
+                <div class="field">
+                    <label class="label" for="title">Title</label>
+                    <input class="input" id="title" type="text" placeholder="Bijv. Feedback op planning" />
+                    <p class="error" id="errTitle"></p>
+                </div>
+
+                <div class="field">
+                    <label class="label" for="feedback">Feedback die je hebt gekregen</label>
+                    <textarea class="textarea" id="feedback" rows="6" placeholder="Wat zei iemand? In welke context?"></textarea>
+                    <p class="error" id="errFeedback"></p>
+                </div>
+
+                <div class="field">
+                    <label class="label" for="future">Wat ga je doen om dit te verbeteren?</label>
+                    <textarea class="textarea textarea--big" id="future" rows="8" placeholder="Concrete actie: wat, wanneer, hoe vaak, bewijs"></textarea>
+                    <p class="error" id="errFuture"></p>
+                </div>
+
+                <div class="actions">
+                    <button class="btn" type="submit">Save feedback</button>
+                    <button class="btn btn--ghost" id="clearBtn" type="button">Clear</button>
+                </div>
+
+                <p class="success" id="successMsg" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="panel panel--list">
+            <div class="listhead">
+                <h2 class="h2">Saved feedback</h2>
+                <input class="input" id="search" type="text" placeholder="Search title/feedback..." />
+            </div>
+
+            <div class="list" id="itemsList"></div>
+            <div class="empty muted" id="emptyState">Nog geen feedback items.</div>
+        </section>
+
+    </section>
+</main>
+</body>
+</html>
