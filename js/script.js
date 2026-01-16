@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setSession(username);
 
         // Redirect naar intro (Vite root is /docs)
-        window.location.href = "/intro.html";
+        window.location.href = "./intro.html";
     });
 
     if (createAccount) {

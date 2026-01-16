@@ -14,5 +14,5 @@ export function requireAuth() {
 
 export function logout() {
     localStorage.removeItem("authUser");
-    window.location.href = "../index.html";
+    window.location.href = "./index.html";
 }

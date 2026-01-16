@@ -21,5 +21,5 @@ document.getElementById("next1").addEventListener("click", () => {
 });
 
 document.getElementById("finishIntro").addEventListener("click", () => {
-    window.location.href = "/hub.html";
+    window.location.href = "./hub.html";
 });
