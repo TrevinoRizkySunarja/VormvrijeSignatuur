@@ -1,4 +1,4 @@
-import { requireAuth, logout } from "/js/auth.js";
+import { requireAuth, logout } from "./auth.js";
 
 requireAuth();
 
